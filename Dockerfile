@@ -6,7 +6,7 @@ COPY --from=builder /usr/local/bin/jenkins-slave /usr/local/bin/jenkins-agent
 COPY --from=builder /usr/share/jenkins/agent.jar /usr/share/jenkins/agent.jar
 
 USER root
-RUN sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+RUN apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 ARG user=jenkins
 
